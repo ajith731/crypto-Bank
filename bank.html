@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Page</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    
+<div class=" h-200 w-400 flex">
+
+  <div class="w-200 h-200 ">
+    <div class="mb-6 mt-30">
+      <h2 class="font-bold px-70">Deposit</h2>
+      <input type="number" id="depAmount" class="border-2 w-100 h-10 mb-2 p-2 rounded-lg" placeholder="Enter amount">
+      <input type="password" id="depPass" class="border-2 w-100 h-10 mb-2 p-2 rounded-lg" placeholder="Password">
+      <button onclick="deposit()" class="w-30 hover:bg-blue-400 h-10 rounded-lg mx-4 bg-red-700 text-white">Deposit</button>
+    </div>
+
+    <div class="mb-6 mt-30">
+      <h2 class="font-bold px-70">Withdraw</h2>
+      <input type="number" id="wAmount" class="border-2 w-100 h-10 mb-2 p-2 rounded-lg" placeholder="Enter amount">
+      <input type="password" id="wPass" class="border-2 w-100 h-10 mb-2 p-2 rounded-lg" placeholder="Password">
+      <button onclick="withdraw()" class="w-30 hover:bg-blue-400 h-10 rounded-lg mx-4 bg-red-700 text-white">Withdraw</button>
+    </div>
+      <div class=" h-200 w-200 mt-40 ">
+    <h2 class="font-semibold mb-2">Transaction History</h2>
+    <table class="w-full border">
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="border px-2 py-1">Date</th>
+          <th class="border px-2 py-1">Type</th>
+          <th class="border px-2 py-1">Amount</th>
+        </tr>
+      </thead>
+      <tbody id="transactionTable"></tbody>
+    </table>
+  </div>
+  </div>
+
+
+
+  </div>
+
+</div>
+
+<script>
+function addTransaction(type, amount) {
+  const tableBody = document.getElementById("transactionTable");
+  const row = document.createElement("tr");
+  const date = new Date().toLocaleString();
+
+  row.innerHTML = `
+    <td class="border px-2 py-1">${date}</td>
+    <td class="border px-2 py-1">${type}</td>
+    <td class="border px-2 py-1">${amount}</td>
+  `;
+
+  tableBody.appendChild(row);
+}
+
+function withdraw() {
+  const storedData = JSON.parse(localStorage.getItem("BD"));
+  const enteredPass = document.getElementById("wPass").value;
+  const amount = document.getElementById("wAmount").value;
+
+  if (enteredPass !== storedData.Password) {
+    alert("Invalid user");
+  } else {
+    alert("Withdraw successful");
+    addTransaction("Withdraw", amount);
+  }
+}
+
+function deposit() {
+  const storedData = JSON.parse(localStorage.getItem("BD"));
+  const enteredPass = document.getElementById("depPass").value;
+  const amount = document.getElementById("depAmount").value;
+
+  if (enteredPass !== storedData.Password) {
+    alert("Invalid user");
+  } else {
+    alert("Deposit successful");
+    addTransaction("Deposit", amount);
+  }
+}
+</script>
+
+</body>
+</html>

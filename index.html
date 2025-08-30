@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRYPTO</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./register.html">
+  <link rel="stylesheet" href="./carworld.html">
+  <style>
+    /* From Uiverse.io by satyamchaudharydev */ 
+.button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: rgb(0 107 179);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.button:hover .icon {
+  transform: translate(4px);
+}
+
+.button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+/* From Uiverse.io by Sharkotech */ 
+.card {
+  width: 190px;
+  height: 254px;
+  background: rgba(211, 211, 211, 0.199);
+  position: absolute;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+#c1 {
+  background-color: rgb(165, 163, 21);
+}
+
+#c2 {
+  background-color: rgb(165, 163, 21);
+}
+
+#c3 {
+  background-color: rgb(165, 163, 21);
+}
+
+#c4 {
+  background-color: rgb(165, 163, 21);
+}
+
+.main:hover #c1 {
+  transform: translateX(-100px) rotate(-40deg);
+}
+
+.main:hover #c2 {
+  transform: translateX(-50px) rotate(-30deg);
+}
+
+.main:hover #c3 {
+  transform: translateX(0) rotate(-20deg);
+}
+
+.main:hover #c4 {
+  transform: translateX(50px) rotate(-10deg);
+}
+
+#c1:hover {
+  transform: translateX(-150px) rotate(0deg) !important;
+}
+
+#c2:hover {
+  transform: translateX(-100px) rotate(0deg) !important;
+}
+
+#c3:hover {
+  transform: translateX(-50px) rotate(0deg) !important;
+}
+
+#c4:hover {
+  transform: translateX(50px) rotate(0deg) !important;
+}
+
+.main {
+  display: grid;
+  height: 50vmax;
+  place-items: center;
+}
+
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <header class="bg-yellow-200 shadow-md sticky top-0">
+    <div class="flex items-center justify-between px-6 h-16">
+      
+      <h1 class="text-2xl font-bold text-blue-600">CRYPTO</h1>
+      
+      <nav class="flex items-center space-x-6">
+        <a href="#" class="text-gray-700 hover:text-red-600">
+          <i class="fa-solid fa-house"></i>
+        </a>
+        <a href="#" class="text-blue-700 font-bold hover:text-red-600">About</a>
+        <a href="#" class="text-blue-700 font-bold hover:text-red-600">Services</a>
+        <a href="./register.html" class="text-blue-700 font-bold hover:text-red-600 ">Register</a>
+      </nav>
+      
+      <a href="./login.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+        Login
+      </a>
+    </div>
+  </header>
+
+
+  <div class=" bg-blue-300 border-1 w-390 h-165 flex">
+    
+    <div class=" w-195 h-150 bg-blue-300">
+<h1 class="font-bold text-4xl pt-30 px-7">BANKING MADE SIMPLE</h1>
+<h2 class="pt-10 px-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, repellendus tempore, libero mollitia eligendi enim rerum inventore magni dolores obcaecati id fugiat voluptatibus fugit. Inventore voluptatum necessitatibus minima illo porro.</h2>
+
+
+<a href="./carworld.html" class="button mt-13 mx-9 flex items-center w-50 ">
+  Apply Now
+  <svg class="icon ml-2" viewBox="0 0 24 24" fill="currentColor">
+    <path
+      fill-rule="evenodd"
+      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+      clip-rule="evenodd"
+    ></path>
+  </svg>
+</a>
+
+
+
+
+</div>
+
+    <div class=" w-195 h-150">
+        <img src="./pexels-maitree-rimthong-444156-1602726.jpg"class="w-100 mx-40 mt-50 rounded-lg " alt="">
+
+    </div>
+
+  </div>
+
+  <!-- ------------------------------------------------------------------- -->
+   <div class="flex mt-25 sticky top-0  ">
+
+<div class=" mt8 w-390 h-150">
+<div class="main sticky top-0">
+  <div class="card" id="c1" > <img src="./pexels-emrecan-2079292.jpg" alt=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p></div>
+  <div class="card" id="c2"><img src="./pexels-olly-3770140.jpg" alt=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.!</p></div>
+  <div class="card" id="c3"><img src="./pexels-suzyhazelwood-1791583.jpg"   alt=""><p>Lorem ipsum dolor sit amet, consectetur adipisicing  </p></div>
+  <div class="card" id="c4"><img src="./cur.jpg" alt=""><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p></div>
+</div>
+
+</div>
+
+<div class=" w-390 h-150">
+  <h1 class="font-bold pt-25 text-4xl ">OUR BANKING SERVICES</h1>
+  <p class="text-2xl text-gray-700 pt-19 px-6 ">We provide secure, reliable, and customer-focused banking solutions designed to meet your financial needs. Our services include:
+
+Personal Banking – Savings and current accounts, debit/credit cards, and personalized financial solutions.
+
+Digital Banking – 24/7 access to your accounts via mobile and internet banking with seamless transactions.
+
+Loans & Credit – Home, personal, vehicle, and business loans with flexible repayment options.
+
+Wealth Management – Investment planning, mutual funds, insurance, and advisory services to grow your wealth.</p>
+  
+</div>
+
+
+   </div>
+<!-- ------------------------------------------------------------------------------------------------------- -->
+   <div class="flex sticky top-0  bg-green-700">
+<div class=" w-390 h-165 pt-9 px-40 ">
+
+<img src="./pexels-olly-3770140.jpg"class=" rounded-2xl pt-25   " alt="employeee">
+
+</div>
+
+<div class="w-390 h-165 pt-10"> <h1 class="pt-10 font-bold text-7xl" >Why Choose Our Bank?</h1>
+  <p class="pt-6 text-xl">
+
+✅ Trusted & Secure – Advanced security measures to keep your money and data safe..</p>
+
+  <p class="pt-6 text-xl"></p>✅ Customer-Centric Service – Friendly, responsive support online and in-branch.</p>
+
+  <p class="pt-6 text-xl">✅ Convenient Digital Banking – 24/7 mobile and internet banking for easy access anywhere.</p>
+
+  <p class="pt-6 text-xl">✅ Wide Range of Services – From savings to loans, investments, and business solutions.</p>
+
+  <p class="pt-6 text-xl">✅ Competitive Rates – Attractive interest rates and flexible repayment options.</p>
+
+  <p class="pt-6 text-xl">✅ Nationwide Presence – Extensive branch and ATM network for seamless transactions.</p></div>
+
+   </div>
+
+</body>
+<div class="border-1 border-black w-390 h-170 sticky top-0 bg-gray-500">
+<div class="border-1 border-black w-390 h-170 sticky top-0 bg-gray-500">
+  <footer class="text-white py-6">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+
+      <h2 class="text-2xl font-bold text-yellow-300">CRYPTO BANK</h2>
+
+      <nav class="flex space-x-6 mt-4 md:mt-0">
+        <a href="#" class="hover:text-yellow-300">Home</a>
+        <a href="#" class="hover:text-yellow-300">About</a>
+        <a href="#" class="hover:text-yellow-300">Services</a>
+        <a href="./register.html" class="hover:text-yellow-300">Register</a>
+        <a href="./login.html" class="hover:text-yellow-300">Login</a>
+      </nav>
+
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="#" class="hover:text-yellow-300"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="hover:text-yellow-300"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-yellow-300"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="hover:text-yellow-300"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="mt-6 text-center text-sm text-gray-300">
+    </div>
+  </footer>
+</div>
+
+</div>
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+</html>
